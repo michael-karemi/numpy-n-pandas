@@ -1,0 +1,80 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNB1cfkZNHWdpZyTZW4zP0r",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/michael-karemi/numpy-n-pandas/blob/main/linear%20regression\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "id": "zIbeFDoCzqDM"
+      },
+      "outputs": [],
+      "source": [
+        "import numpy as np\n",
+        "import pandas as pd\n",
+        "import matplotlib.pyplot as plt\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dataset = pd.read_csv('/2.2 Data.csv.csv')\n",
+        "x = dataset.iloc[:, :-1].values\n",
+        "y = dataset.iloc[:, 3].values"
+      ],
+      "metadata": {
+        "id": "EcWXFNrf0kLN"
+      },
+      "execution_count": 9,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from sklearn.impute import SimpleImputer\n",
+        "imputer = SimpleImputer(missing_values = np.nan, strategy = 'mean')\n",
+        "imputer = imputer.fit(x[:, 1:3])"
+      ],
+      "metadata": {
+        "id": "FOcQbf3H11IA"
+      },
+      "execution_count": 10,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from sklearn."
+      ],
+      "metadata": {
+        "id": "zlwCGtuR2nOZ"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
